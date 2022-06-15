@@ -3,6 +3,8 @@ package jmu.cs.DS.Fundamentals;
 
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Stack;
 
@@ -33,7 +35,7 @@ public class FixedCapacityStackOfStrings {
 
     public static void main(String[] args) {
 
-        Stack<Integer> st;
-        LinkedList<String> list;
+        ArrayList<Integer> list;
+
     }
 }
