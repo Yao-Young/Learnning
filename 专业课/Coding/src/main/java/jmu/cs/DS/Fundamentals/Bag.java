@@ -64,5 +64,9 @@ public class Bag<T> implements Iterable<T> {
         }
 
     }
+
+    public static void main(String[] args) {
+
+    }
 }
 //用到泛型，自动装箱，迭代器模式
