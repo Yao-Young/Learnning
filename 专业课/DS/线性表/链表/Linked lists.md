@@ -53,5 +53,32 @@ Next, suppose that you want to remove the fifirst node from a list. **This opera
 
 
 
+one of the fundamental operations on collections is to process each item by $iterating$ through the collection using Java's $foreach$ statement.This paradigm leads to clear and compact code that is free from dependence on the details of a collection’s implementation. To consider the task of implementing iteration, we start with a snippet of client code that prints all of the items in a collection of strings, one per line:
+
+![1655284863671](./assets/1655284863671.png)
+
+Now, this foreach statement is shorthand for a while construct (just like the for statement itself). It is essentially equivalent to the following while statement:
+
+![1655284905049](./assets/1655284905049.png)
+
+This code exposes the ingredients that we need to implement in any iterable collection: 
+
+- The collection must implement an iterator() method that returns an Iterator object. 
+- The Iterator class must include two methods: hasNext() (which returns a boolean value) and next() (which returns a generic item from the collection).
+
+```
+简而言之，只要我们的集合数据结构实现了iterator，就可以使用foreach来迭代遍历集合元素
+
+iterator
+比如LinkedList 使用接口ListIterator -> Iterator
+
+
+Collection:
+1-泛型
+2-集合大小的变化(动态数组还是链表)
+3-对象游离(垃圾回收)
+4-迭代(实现Iterator)
+```
+
 
 
