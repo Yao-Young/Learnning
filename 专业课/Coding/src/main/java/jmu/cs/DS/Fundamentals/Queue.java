@@ -2,6 +2,7 @@ package jmu.cs.DS.Fundamentals;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.TreeSet;
 
 public class Queue<Item> implements Iterable<Item> {
 
@@ -23,7 +24,7 @@ public class Queue<Item> implements Iterable<Item> {
 
     public static void main(String[] args) {
         java.util.Queue queue = new LinkedList();
-
+        TreeSet<Integer> tree;
     }
 
 
