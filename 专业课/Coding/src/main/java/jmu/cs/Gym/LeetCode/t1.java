@@ -1,25 +1,32 @@
 package jmu.cs.Gym.LeetCode;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class t1 {
-    public int minFlipsMonoIncr(String s) {
-        int len = s.length();
-        int ans = 0x3f3f3f3f;
-        int[] p = new int[len+1];
 
-        p[0] = 0;
-        for(int i = 0; i < len; i++) {
-            p[i+1] = p[i] + s.charAt(i) - '0';
+    public static HashMap<String, Integer> map = new HashMap<>();
+
+    public static void dfs(int index, String str, StringBuffer path) {
+        if(index == str.length()) {
+            if(map.containsKey(path)) {
+                int i = map.get(path);
+                map.put(String.valueOf(path), i+1);
+            }
+            else {
+                map.put(String.valueOf(path), 1);
+            }
+            return;
         }
-
-        for(int i = 0; i <= len; i++) {
-            ans = Math.min(ans, p[i]+len-i-(p[len]-p[i]));
-        }
-
-        return ans;
+        dfs(index+1, str, new StringBuffer(path));
+        dfs(index+1, str, new StringBuffer(path.append(str.charAt(index))));
     }
 
     public static void main(String[] args) {
 
-    }
+        int[] array = new int[10];
 
+
+    }
 }
