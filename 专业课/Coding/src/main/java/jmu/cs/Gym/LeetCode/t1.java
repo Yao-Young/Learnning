@@ -1,8 +1,5 @@
 package jmu.cs.Gym.LeetCode;
-
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
 
 public class t1 {
 
