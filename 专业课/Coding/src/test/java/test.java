@@ -1,21 +1,27 @@
-import edu.princeton.cs.algs4.StdOut;
-import jmu.cs.DS.Fundamentals.Bag;
-
-import java.util.Iterator;
+import java.util.HashMap;
 
 public class test {
 
-    public static void main(String[] args) {
+    public int minCostToMoveChips(int[] position) {
 
-        Bag<String> bag = new Bag<>();
-        bag.add("yzy");
-        bag.add("zzz");
-        StdOut.println("size = " + bag.size());
+        int len = position.length;
 
-        Iterator it = bag.iterator();
-        while(it.hasNext()) {
-            System.out.println(it.next());
+        int min = Integer.MAX_VALUE;
+
+        for(int i = 0; i < len; i++) {
+            int cnt = 0;
+            for(int j = 0; j < len; j++) {
+                if(i == j) continue;
+                if(Math.abs(position[i] - position[j])%2 != 0) {
+                    cnt++;
+                }
+            }
+            min = cnt < min ? cnt : min;
         }
+        return min;
+    }
+
+    public static void main(String[] args) {
 
     }
 }
